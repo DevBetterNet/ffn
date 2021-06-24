@@ -4,15 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web</title>
-    <link rel="stylesheet" href="@Url.Content($"~/lib/bulma/bulma.min.css")" />
+    <link rel="stylesheet" href="@Url.Content($"~/lib/bootstrap/css/bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content($"~/css/site.css")" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-            </div>
-        </nav>
-    </header>
+    <!--navigation-->
+    <section class="smart-scroll">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand heading-black" href="@Url.Action("Index","Home") ">
+                    DevBetter
+                </a>
+                <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span data-feather="grid"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="@Url.Action("Index","Home", new { Area = "Blog" })">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
