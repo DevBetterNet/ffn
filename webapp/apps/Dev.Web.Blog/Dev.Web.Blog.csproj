@@ -6,6 +6,7 @@
     <!--When true, compiles and emits the Razor assembly as part of publishing the project-->
     <RazorCompileOnPublish>false</RazorCompileOnPublish>
     <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,13 +15,14 @@
 
   <ItemGroup>
     <ViewFiles Include="Areas\Views\**\*.cshtml" />
+    <ContentFiles Include="Areas\Content\**\*.*" />
+    <ContentMinFiles Include="Areas\Content\**\*.min.*"/>
   </ItemGroup>
-  
+
+
   <Target Name="CopyViews" AfterTargets="Build">
-
-    <!--<Copy SourceFiles="@(ViewFiles)"
-          DestinationFiles="..\..\Dev.Web.HostCreator\Themes\Default\Areas\Blog\Views\%(RecursiveDir)%(Filename)%(Extension)" />-->
-
     <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\Blog\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\Blog\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentMinFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\Blog\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
   </Target>
 </Project>
