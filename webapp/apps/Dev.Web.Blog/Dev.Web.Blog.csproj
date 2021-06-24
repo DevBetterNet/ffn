@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!--When true, compiles and emits the Razor assembly as part of publishing the project-->
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dev\Dev.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ViewFiles Include="Areas\Views\**\*.cshtml" />
+  </ItemGroup>
+  
+  <Target Name="CopyViews" AfterTargets="Build">
+
+    <!--<Copy SourceFiles="@(ViewFiles)"
+          DestinationFiles="..\..\Dev.Web.HostCreator\Themes\Default\Areas\Blog\Views\%(RecursiveDir)%(Filename)%(Extension)" />-->
+
+    <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\Blog\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

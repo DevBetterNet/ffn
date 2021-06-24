@@ -1,0 +1,10 @@
+{
+  "Group": "Sys",
+  "FriendlyName": "System Core plugin",
+  "SystemName": "Sys.Core",
+  "Version": "0.0.1",
+  "Author": "dev",
+  "DisplayOrder": 1,
+  "FileName": "Dev.Plugin.Sys.Core.dll",
+  "Description": "All website application must to install this plugin"
+}

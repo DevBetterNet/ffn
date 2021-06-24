@@ -1,0 +1,22 @@
+﻿{
+  "InstalledPluginNames": [
+    "Obsolete field, using only for compatibility"
+  ],
+  "InstalledPlugins": [
+    {
+      "SystemName": "Data.EFCore",
+      "Version": "0.0.1"
+    },
+    {
+      "SystemName": "App.Blog",
+      "Version": "0.0.1"
+    },
+    {
+      "SystemName": "Sys.Auth",
+      "Version": "0.0.1"
+    }
+  ],
+  "PluginNamesToUninstall": [],
+  "PluginNamesToDelete": [],
+  "PluginNamesToInstall": []
+}

@@ -1,0 +1,10 @@
+{
+  "Group": "Data",
+  "FriendlyName": "Entity Framework Core",
+  "SystemName": "Data.EFCore",
+  "Version": "0.0.1",
+  "Author": "dev",
+  "DisplayOrder": 1,
+  "FileName": "Dev.Plugin.Data.EFCore.dll",
+  "Description": "Full ORM, EntityFramework Core"
+}
