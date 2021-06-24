@@ -1,0 +1,272 @@
+﻿<nav class="fix_topscroll logo_on_fixed  topbar navigation">
+	<div class="nav-wrapper container">
+		<a id="logo-container" href="@Url.Action("Index","Home")" class=" brand-logo">Tiệm Cô Tít</a>
+
+		<a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
+			<i class="mdi mdi-arrow-left" data-page=""></i>
+		</a>
+
+
+		<a href="#" data-target="slide-nav" class="waves-effect waves-circle navicon sidenav-trigger show-on-large">
+			<i class="mdi mdi-menu"></i>
+		</a>
+
+		<a href="#" data-target="slide-settings"
+		   class="waves-effect waves-circle navicon right sidenav-trigger show-on-large">
+			<i class="mdi mdi-settings-outline"></i>
+		</a>
+
+		<a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
+			<i class="mdi mdi-invert-colors mdi-transition1"></i>
+		</a>
+	</div>
+</nav>
+
+
+<ul id="slide-nav" class="sidenav sidemenu">
+	<li class="user-wrap">
+		<div class="user-view row">
+
+			<div class="col s9 infoarea">
+				<a href="@Url.Action("Profile", "Account")"><span class="name">Tracy Nguyen</span></a>
+				<a href="#"><span class="email">tracynguyensaigon@gmail.com</span></a>
+			</div>
+		</div>
+	</li>
+
+
+	<li class="menulinks">
+		<ul class="collapsible">
+			<!-- Menu Data Start-->
+			<li class="sh-wrap">
+				<div class="subheader">Trang cá nhân</div>
+			</li>
+			<li class="lvl1 ">
+				<div class="waves-effect ">
+					<a href="#" data-target="slide-settings" class="sidenav-trigger">
+						<i class="mdi mdi-settings-outline"></i><span class="title">Cài đặt tuỳ chọn</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1 ">
+				<div class=" waves-effect   ui-app-products-home ">
+					<a href="@Url.Action("Profile", "Account")">
+						<i class="mdi mdi-widgets   "></i>
+						<span class="title">Tài khoản của tôi</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+			<li class="sh-wrap">
+				<div class="subheader">Mua hàng</div>
+			</li>
+			<li class="lvl1 ">
+				<div class=" waves-effect  active ui-app-products-home ">
+					<a href="@Url.Action("Cart", "Product")">
+						<i class="mdi mdi-cart-outline"></i>
+						<span class="title">Giỏ hàng</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1 ">
+				<div class=" waves-effect   ui-app-products-home ">
+					<a href="@Url.Action("Index", "Wallet")">
+						<i class="mdi mdi-wallet"></i>
+						<span class="title">Thanh toán</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1 ">
+				<div class=" waves-effect   ui-app-products-home ">
+					<a href="@Url.Action("Index", "Blog")">
+						<i class="mdi mdi-square-edit-outline"></i>
+						<span class="title">Thông tin sản phẩm</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+			<li class="sh-wrap">
+				<div class="subheader">Liên hệ</div>
+			</li>
+			<li class="lvl1 ">
+				<div class="waves-effect ">
+					<a href="mailto:email@tiemcotit.com">
+						<i class="mdi mdi-email-outline"></i>
+						<span class="title">Email</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1 ">
+				<div class="waves-effect ">
+					<a href="tel:03 5522 5600">
+						<i class="mdi mdi-cellphone-basic"></i>
+						<span class="title">Hotline</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1 ">
+				<div class="waves-effect ">
+					<a href="@Url.Action("Index", "Chat")">
+						<i class="mdi mdi-message-text-outline"></i>
+						<span class="title">Chat</span>
+					</a>
+				</div>
+			</li> <!-- Menu Data End-->
+		</ul>
+	</li>
+
+
+
+	<li class="copy-spacer"></li>
+	<li class="copy-wrap">
+		<div class="copyright">&copy; Copyright &#169; Tiem Co Tit</div>
+	</li>
+</ul>
+
+<ul id="slide-settings" class="sidenav sidesettings ">
+	<li class="menulinks">
+		<ul class="collapsible">
+			<!-- Menu Settings Start-->
+			<li class="sh-wrap">
+				<div class="subheader">Màu sắc</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="red">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-intermediate red-text text-lighten-2"></i>
+						<span class="title">Đỏ</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="orange">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline deep-orange-text text-lighten-2"></i>
+						<span class="title">Cam</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="blue">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline blue-text text-lighten-2"></i>
+						<span class="title">Xanh</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="amber">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline amber-text"></i>
+						<span class="title">Vàng</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="brown">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline brown-text text-lighten-2"></i>
+						<span class="title">Nâu</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  theme">
+				<div class="waves-effect appsettings " data-type="theme" data-value="grey">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline grey-text text-darken-2"></i>
+						<span class="title">Đen</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+			<li class="sh-wrap">
+				<div class="subheader">Ánh sáng</div>
+			</li>
+			<li class="lvl1  site_mode">
+				<div class="waves-effect appsettings active" data-type="site_mode" data-value="light">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-intermediate"></i>
+						<span class="title">Ban ngày</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  site_mode">
+				<div class="waves-effect appsettings " data-type="site_mode" data-value="dark">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline"></i>
+						<span class="title">Ban đêm</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+			<li class="sh-wrap">
+				<div class="subheader">Phong cách</div>
+			</li>
+			<li class="lvl1  header">
+				<div class="waves-effect appsettings active" data-type="header" data-value="light">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-intermediate"></i>
+						<span class="title">Nhã nhặn</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  header">
+				<div class="waves-effect appsettings " data-type="header" data-value="dark">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline"></i>
+						<span class="title">Trầm ấm</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  header">
+				<div class="waves-effect appsettings " data-type="header" data-value="colored">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline"></i>
+						<span class="title">Rực rỡ</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+			<li class="sh-wrap">
+				<div class="subheader">Căn chỉnh</div>
+			</li>
+			<li class="lvl1  header_align">
+				<div class="waves-effect appsettings " data-type="header_align" data-value="left">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-intermediate"></i>
+						<span class="title">Bên trái</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  header_align">
+				<div class="waves-effect appsettings active" data-type="header_align" data-value="center">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline"></i>
+						<span class="title">Trung tâm</span>
+					</a>
+				</div>
+			</li>
+			<li class="lvl1  header_align">
+				<div class="waves-effect appsettings " data-type="header_align" data-value="right">
+					<a href="#!">
+						<i class="mdi mdi-checkbox-blank-outline"></i>
+						<span class="title">Bên phải</span>
+					</a>
+				</div>
+			</li>
+			<li class="sep-wrap">
+				<div class="divider"></div>
+			</li>
+		</ul>
+	</li>
+</ul>

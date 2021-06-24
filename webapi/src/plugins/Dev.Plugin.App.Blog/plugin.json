@@ -1,0 +1,10 @@
+{
+  "Group": "App",
+  "FriendlyName": "Blog plugin",
+  "SystemName": "App.Blog",
+  "Version": "0.0.1",
+  "Author": "dev",
+  "DisplayOrder": 1,
+  "FileName": "Dev.Plugin.App.Blog.dll",
+  "Description": "Simple blog"
+}

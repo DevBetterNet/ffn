@@ -1,0 +1,55 @@
+﻿@model GuidGeneratorModel
+
+<div class="columns">
+	<form asp-controller="GuidGenerator" asp-action="Index" method="post">
+		<div class="filed">
+			<label class="label">How many GUIDs do you want (1-1000):</label>
+		</div>
+
+		<div class="field">
+			<div class="columns">
+				<div class="column">
+					<div class="control">
+						@Html.TextBoxFor(model => model.NumberOfGuids, new { type = "number", min = "0", max="1000", step = "1", @class="input" })
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="control">
+						<button class="button is-primary" type="submit">Send</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="field">
+			<div class="label">
+				Format
+			</div>
+			<div class="control">
+				<label class="checkbox">
+					@Html.CheckBoxFor(model => model.IsUpper)
+					Upper
+				</label>
+				<label class="checkbox">
+					@Html.CheckBoxFor(model => model.HasBraces)
+					{} Braces
+				</label>
+
+				<label>
+					@Html.CheckBoxFor(model => model.HasHypens)
+					Has Hypens
+				</label>
+			</div>
+		</div>
+
+		<div class="filed">
+			<label class="label">
+				Results
+			</label>
+			<div class="control">
+				<textarea class="textarea is-success" rows="5" placeholder="Result will be here">@Html.Raw(Model.GuidGenerateInString)</textarea>
+			</div>
+		</div>
+	</form>
+</div>

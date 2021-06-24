@@ -1,0 +1,10 @@
+{
+  "Group": "Sys",
+  "FriendlyName": "System Authenticate and Authentication",
+  "SystemName": "Sys.Auth",
+  "Version": "0.0.1",
+  "Author": "dev",
+  "DisplayOrder": 1,
+  "FileName": "Dev.Plugin.Sys.Auth.dll",
+  "Description": "System Authen"
+}

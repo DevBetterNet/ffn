@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!--When true, compiles and emits the Razor assembly as part of publishing the project-->
+    <RazorCompileOnPublish>false</RazorCompileOnPublish>
+    <RazorCompileOnBuild>false</RazorCompileOnBuild>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ViewFiles Include="Areas\Views\**\*.cshtml" />
+    <ContentFiles Include="Areas\Content\**\*.*" />
+    <ContentMinFiles Include="Areas\Content\**\*.min.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Content\scss\" />
+  </ItemGroup>
+
+
+  <Target Name="CopyViews" AfterTargets="Build">
+    <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\Blog\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\Blog\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentMinFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\Blog\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+  </Target>
+</Project>

@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Chitmeo - Utilies online</title>
+	<link rel="stylesheet" href="@Url.Content($"~/lib/bulma/bulma.min.css")" />
+	<link rel="stylesheet" href="@Url.Content($"~/UFD/css/site.css")" />
+</head>
+<body>
+
+	<nav class="navbar" role="navigation" aria-label="main navigation">
+		<div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start">
+				<a class="navbar-item" href="@Url.Action("Index","Home",  new { Area = "" })">
+					Home
+				</a>
+
+				<a class="navbar-item">
+					Utility online
+				</a>
+
+			</div>
+		</div>
+	</nav>
+
+	<section class="container">
+		<div class="columns">
+			<div class="column is-3">
+				<aside class="menu">
+					<p class="menu-label">
+						Generator
+					</p>
+					<ul class="menu-list">
+						<li>
+							@Html.ActionLink("Guid", "Index", "GuidGenerator", new { area = "UFD"})
+						</li>
+						<li>
+							@Html.ActionLink("Jwt", "Index", "JwtGenerator", new { area = "UFD"})
+						</li>
+						<li>
+							@Html.ActionLink("String", "Index", "StringGenerator", new { area = "UFD"})
+						</li>
+					</ul>
+				</aside>
+			</div>
+
+			<div class="column is-9">
+				<nav class="breadcrumb" aria-label="breadcrumbs">
+					<ul></ul>
+				</nav>
+				@RenderBody()
+			</div>
+		</div>
+	</section>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+			<p>This site is using https://bulma.io/ </p>
+		</div>
+	</footer>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168736414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168736414-1');
+</script>
+
+</body>
+</html>

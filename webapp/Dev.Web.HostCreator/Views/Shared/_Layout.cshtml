@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Dev</title>
+	<link rel="stylesheet" href="@Url.Content($"~/lib/bootstrap/css/bootstrap.min.css")" />
+	<link rel="stylesheet" href="@Url.Content($"~/css/site.css")" />
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Home</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbars">
+				<ul class="navbar-nav me-auto mb-2 mb-sm-0">
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("Index","Home", new { Area = "Blog" })">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="@Url.Action("Index","Home", new { Area = "UFD" })">Utility online</a>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<footer class="border-top footer text-muted">
+		<div class="container">
+		</div>
+	</footer>
+	<script src="@Url.Content("~/lib/bootstrap/js/bootstrap.min.js")"> </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168736414-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-168736414-1');
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "Group": "App",
+  "FriendlyName": "Shopping Cart plugin",
+  "SystemName": "App.Shop",
+  "Version": "0.0.1",
+  "Author": "dev",
+  "DisplayOrder": 5,
+  "FileName": "Dev.Plugin.App.Shop.dll",
+  "Description": "Simple Shopping Cart"
+}

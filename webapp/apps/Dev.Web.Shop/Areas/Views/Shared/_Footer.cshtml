@@ -1,0 +1,75 @@
+﻿<footer class="page-footer center">
+	<div class="container footer-content">
+		<div class="row">
+			<div class="">
+				<h5 class="logo">TIỆM CÔ TÍT</h5>
+			</div>
+			<div class="link-wrap">
+
+				<ul class="link-ul">
+					<li><a class="" href="#"><i class="mdi mdi-phone"></i> 03 5522 5600</a></li>
+					<li><a class=""  href="mailto:email@tiemcotit.com"><i class="mdi mdi-email"></i> email@tiemcotit.com</a></li>
+					<li><a class="" href="#"><i class="mdi mdi-map-marker"></i>Nho Quan, Ninh Bình</a></li>
+				</ul>
+				<ul class="social-wrap">
+					<li class="social">
+						<a class="" href="#"><i class="mdi mdi-facebook"></i></a>
+						<a class="" href="#"><i class="mdi mdi-twitter"></i></a>
+						<a class="" href="#"><i class="mdi mdi-dribbble"></i></a>
+						<a class="" href="#"><i class="mdi mdi-google-plus"></i></a>
+						<a class="" href="#"><i class="mdi mdi-linkedin"></i></a>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
+		<div class="container">
+			&#169; 2021 <a class="" href="#">Tiệm Cô Tít</a>
+		</div>
+	</div>
+</footer>
+@{
+	//Todo need to set active define on controller and action
+}
+
+<div class="footer-menu circular">
+	<ul>
+		<li>
+			<a href="@Url.Action("Index","Cart")">
+				<i class="mdi mdi-open-in-app"></i>
+				<span>Giỏ hàng</span>
+			</a>
+		</li>
+		<li>
+			<a href="@Url.Action("Index","Wallet")">
+				<i class="mdi mdi-palette-swatch"></i>
+				<span>Thanh toán</span>
+			</a>
+		</li>
+		<li class="active">
+			<a href="@Url.Action("Index","Home")" class='active'>
+				<i class="mdi mdi-home-outline"></i>
+				<span>Trang chủ</span>
+			</a>
+		</li>
+		<li>
+			<a href="@Url.Action("Index","Blog")">
+				<i class="mdi mdi-flask-outline"></i>
+				<span>Bài viết</span>
+			</a>
+		</li>
+		<li>
+			<a href="@Url.Action("Index","Contact")">
+				<i class="mdi mdi-view-dashboard"></i>
+				<span>Liên hệ</span>
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="backtotop">
+	<a class="btn-floating btn primary-bg">
+		<i class="mdi mdi-chevron-up"></i>
+	</a>
+</div>
