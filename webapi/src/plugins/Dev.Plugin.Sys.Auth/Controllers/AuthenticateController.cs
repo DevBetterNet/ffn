@@ -86,32 +86,20 @@ namespace Dev.Plugin.Sys.Auth.Controllers
                 };
 
                 var registrationResult = await _userService.RegisterUserAsync(userRegistration);
-                //User newUser = new User()
-                //{
-                //    Email = user.Email,
-                //    UserName = user.Username
-                //};
+                User newUser = new User()
+                {
+                    Email = user.Email,
+                    UserName = user.Username
+                };
 
-                //var isCreated = await _userService.CreateAsync(newUser, user.Password);
 
-                //if (isCreated.Succeeded)
-                //{
-                //    var jwtToken = GenerateJwtToken(newUser);
+                var jwtToken = GenerateJwtToken(newUser);
 
-                //    return Ok(new RegistrationResponseModel()
-                //    {
-                //        Success = true,
-                //        Token = jwtToken
-                //    });
-                //}
-                //else
-                //{
-                //    return BadRequest(new RegistrationResponseModel()
-                //    {
-                //        Errors = isCreated.Errors.Select(x => x.Description).ToList(),
-                //        Success = false
-                //    });
-                //}
+                return Ok(new RegistrationResponseModel()
+                {
+                    Success = true,
+                    Token = jwtToken
+                });
             }
 
             return BadRequest(new RegistrationResponseModel()

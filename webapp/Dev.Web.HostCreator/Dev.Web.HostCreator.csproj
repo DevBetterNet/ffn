@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\apps\Dev.Web.Blog\Dev.Web.Blog.csproj" />
+    <ProjectReference Include="..\apps\Dev.Web.UFD\Dev.Web.UFD.csproj" />
     <ProjectReference Include="..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
   </ItemGroup>
 

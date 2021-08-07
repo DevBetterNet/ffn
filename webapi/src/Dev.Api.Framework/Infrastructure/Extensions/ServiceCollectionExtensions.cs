@@ -29,9 +29,10 @@ namespace Dev.WebApi.Framework.Infrastructure.Extensions
             //var config = services.ConfigureStartupConfig<DevConfig>(configuration.GetSection("Dev"));
             //add configuration parameters
             var appSettings = new AppSettings();
+            AppSettingsHelper.SaveAppSettings(appSettings);
+
             configuration.Bind(appSettings);
             services.AddSingleton(appSettings);
-            AppSettingsHelper.SaveAppSettings(appSettings);
 
             //initialize plugins
             var mvcCoreBuilder = services.AddMvcCore();

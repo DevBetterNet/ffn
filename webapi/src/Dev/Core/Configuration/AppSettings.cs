@@ -7,7 +7,7 @@ namespace Dev.Core.Configuration
     /// <summary>
     /// Represents the app settings
     /// </summary>
-    public partial class AppSettings
+    public class AppSettings
     {
         /// <summary>
         /// Gets or sets cache configuration parameters

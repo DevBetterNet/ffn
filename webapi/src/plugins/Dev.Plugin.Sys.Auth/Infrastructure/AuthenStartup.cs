@@ -35,7 +35,6 @@ namespace Dev.Plugin.Sys.Auth.Infrastructure
         {
             JwtConfig jwtConfig = new JwtConfig();
             var appSetting = EngineContext.Current.Resolve<AppSettings>();
-
             if (appSetting.AdditionalData.ContainsKey("Jwt"))
             {
                 jwtConfig = appSetting.AdditionalData["Jwt"].ToObject<JwtConfig>();
