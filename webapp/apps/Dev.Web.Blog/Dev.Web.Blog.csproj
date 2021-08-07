@@ -16,7 +16,7 @@
   <ItemGroup>
     <ViewFiles Include="Areas\Views\**\*.cshtml" />
     <ContentFiles Include="Areas\Content\**\*.*" />
-    <ContentMinFiles Include="Areas\Content\**\*.min.*"/>
+    <ContentMinFiles Include="Areas\Content\**\*.min.*" />
   </ItemGroup>
 
 
