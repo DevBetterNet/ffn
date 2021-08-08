@@ -1,4 +1,5 @@
-﻿using Dev.Core.Infrastructure;
+﻿using Dev.Core.Configuration;
+using Dev.Core.Infrastructure;
 using Dev.WebApi.Framework.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -11,13 +12,13 @@ namespace Dev.Api.Framework.Infrastructure
     {
         public int Order => 9999; //should be loaded last
 
-        public void Configure(IApplicationBuilder application, IWebHostEnvironment environment)
+        public void Configure(IApplicationBuilder application, IWebHostEnvironment environment, AppSettings appSettings)
         {
             //Endpoints routing
             application.UseDevEndpoints();
         }
 
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public void ConfigureServices(IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
         {
             //core api template
             services.AddControllers();

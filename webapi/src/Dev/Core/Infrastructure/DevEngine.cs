@@ -102,7 +102,7 @@ namespace Dev.Core.Infrastructure
         /// </summary>
         /// <param name="services">Collection of service descriptors</param>
         /// <param name="configuration">Configuration of the application</param>
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public void ConfigureServices(IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
         {
             //find startup configurations provided by other assemblies
             var typeFinder = new WebAppTypeFinder();
@@ -115,7 +115,7 @@ namespace Dev.Core.Infrastructure
 
             //configure services
             foreach (var instance in instances)
-                instance.ConfigureServices(services, configuration);
+                instance.ConfigureServices(services, configuration, appSettings);
 
             //run startup tasks
             RunStartupTasks(typeFinder);
@@ -129,7 +129,7 @@ namespace Dev.Core.Infrastructure
         /// </summary>
         /// <param name="application">Builder for configuring an application's request pipeline</param>
         /// <param name="environment"></param>
-        public void ConfigureRequestPipeline(IApplicationBuilder application, IWebHostEnvironment environment)
+        public void ConfigureRequestPipeline(IApplicationBuilder application, IWebHostEnvironment environment, AppSettings appSettings)
         {
             ServiceProvider = application.ApplicationServices;
 
@@ -144,7 +144,7 @@ namespace Dev.Core.Infrastructure
 
             //configure request pipeline
             foreach (var instance in instances)
-                instance.Configure(application, environment);
+                instance.Configure(application, environment, appSettings);
         }
 
         /// <summary>

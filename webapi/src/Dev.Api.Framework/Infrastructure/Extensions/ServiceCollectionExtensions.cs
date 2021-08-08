@@ -24,13 +24,10 @@ namespace Dev.WebApi.Framework.Infrastructure.Extensions
 
             //create default file provider
             CommonHelper.DefaultFileProvider = new DevFileProvider(webHostEnvironment);
-            //services.AddScoped<IDevFileProvider>(f => fileProvider);
 
-            //var config = services.ConfigureStartupConfig<DevConfig>(configuration.GetSection("Dev"));
             //add configuration parameters
             var appSettings = new AppSettings();
             AppSettingsHelper.SaveAppSettings(appSettings);
-
             configuration.Bind(appSettings);
             services.AddSingleton(appSettings);
 
@@ -40,27 +37,27 @@ namespace Dev.WebApi.Framework.Infrastructure.Extensions
 
             //create engine and configure service provider
             var engine = EngineContext.Create();
-            engine.ConfigureServices(services, configuration);
-            engine.RegisterDependencies(services, appSettings);
+            engine.ConfigureServices(services, configuration, appSettings);
+             engine.RegisterDependencies(services, appSettings);
         }
 
-        public static TConfig ConfigureStartupConfig<TConfig>(this IServiceCollection services, IConfiguration configuration) where TConfig : class, new()
-        {
-            if (services == null)
-                throw new ArgumentNullException(nameof(services));
+        //public static TConfig ConfigureStartupConfig<TConfig>(this IServiceCollection services, IConfiguration configuration) where TConfig : class, new()
+        //{
+        //    if (services == null)
+        //        throw new ArgumentNullException(nameof(services));
 
-            if (configuration == null)
-                throw new ArgumentNullException(nameof(configuration));
+        //    if (configuration == null)
+        //        throw new ArgumentNullException(nameof(configuration));
 
-            //create instance of config
-            var config = new TConfig();
+        //    //create instance of config
+        //    var config = new TConfig();
 
-            //bind it to the appropriate section of configuration
-            configuration.Bind(config);
+        //    //bind it to the appropriate section of configuration
+        //    configuration.Bind(config);
 
-            //and register it as a service
-            services.AddSingleton(config);
-            return config;
-        }
+        //    //and register it as a service
+        //    services.AddSingleton(config);
+        //    return config;
+        //}
     }
 }

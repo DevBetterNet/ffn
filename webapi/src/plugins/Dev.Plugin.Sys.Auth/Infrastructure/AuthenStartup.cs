@@ -1,6 +1,7 @@
 ﻿using Dev.Core.Configuration;
 using Dev.Core.Infrastructure;
 using Dev.Plugin.Sys.Auth.Configuration;
+using Dev.Plugin.Sys.Auth.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,9 +16,9 @@ namespace Dev.Plugin.Sys.Auth.Infrastructure
 {
     public class AuthenStartup : IDevStartup
     {
-        public int Order => 5;
+        public int Order => 10;
 
-        public void Configure(IApplicationBuilder application, IWebHostEnvironment hostEnvironment)
+        public void Configure(IApplicationBuilder application, IWebHostEnvironment hostEnvironment, AppSettings appSettings)
         {
             if (hostEnvironment.IsDevelopment())
             {
@@ -29,15 +30,18 @@ namespace Dev.Plugin.Sys.Auth.Infrastructure
             application.UseHttpsRedirection();
             application.UseAuthentication();
             application.UseAuthorization();
+
+
+            // custom jwt auth middleware
+            application.UseMiddleware<JwtMiddleware>();
         }
 
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration)
+        public void ConfigureServices(IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
         {
             JwtConfig jwtConfig = new JwtConfig();
-            var appSetting = EngineContext.Current.Resolve<AppSettings>();
-            if (appSetting.AdditionalData.ContainsKey("Jwt"))
+            if (appSettings.AdditionalData.ContainsKey("Jwt"))
             {
-                jwtConfig = appSetting.AdditionalData["Jwt"].ToObject<JwtConfig>();
+                jwtConfig = appSettings.AdditionalData["Jwt"].ToObject<JwtConfig>();
             }
 
             services.AddAuthentication(options =>
@@ -97,6 +101,8 @@ namespace Dev.Plugin.Sys.Auth.Infrastructure
                 //    }
                 //});
             });
+
+
         }
     }
 }
