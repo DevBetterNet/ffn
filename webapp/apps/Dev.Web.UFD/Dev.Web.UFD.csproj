@@ -18,7 +18,6 @@
     <ContentMinFiles Include="Areas\Content\**\*.min.*" />
   </ItemGroup>
 
-
   <Target Name="CopyViews" AfterTargets="Build">
     <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\UFD\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\UFD\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
