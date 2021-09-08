@@ -18,6 +18,11 @@
     <ContentMinFiles Include="Areas\Content\**\*.min.*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ViewFiles Remove="Areas\Views\FamilyDay\Index.cshtml" />
+    <ViewFiles Remove="Areas\Views\StringGenerator\Index.cshtml" />
+  </ItemGroup>
+
   <Target Name="CopyViews" AfterTargets="Build">
     <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\UFD\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
     <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\UFD\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />

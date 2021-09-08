@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\" />
+    <None Include="Areas\UFD\Views\FamilyDay\Index.cshtml" />
+    <None Include="Areas\UFD\Views\StringGenerator\Index.cshtml" />
   </ItemGroup>
 </Project>

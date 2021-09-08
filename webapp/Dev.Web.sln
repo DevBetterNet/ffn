@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dev.Web.Framework", "Dev.We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dev.Web.Blog", "apps\Dev.Web.Blog\Dev.Web.Blog.csproj", "{F81D23AD-B64F-4861-9F3A-2A670ABB628D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dev.Web.UFD", "apps\Dev.Web.UFD\Dev.Web.UFD.csproj", "{F7FECC0A-1569-4BE9-A8B4-82483643066E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dev.Web.UFD", "apps\Dev.Web.UFD\Dev.Web.UFD.csproj", "{F7FECC0A-1569-4BE9-A8B4-82483643066E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

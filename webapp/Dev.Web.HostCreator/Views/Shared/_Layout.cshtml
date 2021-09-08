@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web</title>
+    <title>DevBetter.NET</title>
     <link rel="stylesheet" href="@Url.Content($"~/lib/bootstrap/css/bootstrap.min.css")" />
     <link rel="stylesheet" href="@Url.Content($"~/css/site.css")" />
 </head>
@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <nav class="navbar navbar-expand-md navbar-dark">
                 <a class="navbar-brand heading-black" href="@Url.Action("Index","Home") ">
-                    DevBetter
+                    Chitmeo
                 </a>
                 <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
                         data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -49,5 +49,15 @@
         <div class="container">
         </div>
     </footer>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168736414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168736414-1');
+</script>
+
 </body>
 </html>
