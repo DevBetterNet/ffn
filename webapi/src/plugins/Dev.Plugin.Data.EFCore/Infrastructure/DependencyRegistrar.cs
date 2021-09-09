@@ -9,7 +9,7 @@ namespace Dev.Plugin.Data.EFCore.Infrastructure
 {
     public class DependencyRegistrar : IDependencyRegistrar
     {
-        public int Order => 999;
+        public int Order => 5;
 
         public void Register(IServiceCollection services, ITypeFinder typeFinder, AppSettings appSettings)
         {

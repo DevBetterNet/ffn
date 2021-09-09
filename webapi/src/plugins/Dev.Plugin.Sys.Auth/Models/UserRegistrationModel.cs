@@ -2,7 +2,7 @@
 
 namespace Dev.Plugin.Sys.Auth.Models
 {
-    class UserRegistrationModel
+    public class UserRegistrationModel
     {
         [Required]
         public string Username { get; set; }

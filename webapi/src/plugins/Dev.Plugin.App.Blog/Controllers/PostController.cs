@@ -1,4 +1,5 @@
-﻿using Dev.Plugin.App.Blog.Domain;
+﻿using Dev.Core.Filter;
+using Dev.Plugin.App.Blog.Domain;
 using Dev.Plugin.App.Blog.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace Dev.Plugin.App.Blog.Controllers
             _blogService = blogService;
         }
         #endregion
-
+              
         [HttpGet]
         [Route("GetPosts")]
         public async Task<IActionResult> GetBlogPostsAsync()
@@ -28,6 +29,7 @@ namespace Dev.Plugin.App.Blog.Controllers
         }
 
         [HttpPost]
+        [JwtAuthorize]
         [Route("CreatePost")]
         public async Task<IActionResult> CreatePostAsync(Post post)
         {

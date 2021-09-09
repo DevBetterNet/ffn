@@ -63,6 +63,11 @@ namespace Dev.Services.Configuration
             fileProvider.WriteAllText(filePath, text, Encoding.UTF8);
         }
 
+        public static AppSettings GetAppSettings()
+        {
+            AppSettings appSettings = Singleton<AppSettings>.Instance;
+            return appSettings;
+        }
         #endregion
     }
 }

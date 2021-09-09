@@ -1,3 +1,4 @@
+using Dev.Core.Configuration;
 using Dev.WebApi.Framework.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

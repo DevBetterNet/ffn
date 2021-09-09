@@ -17,15 +17,16 @@ namespace Dev.Core.Infrastructure
         /// <summary>
         /// Add and configure services
         /// </summary>
-        /// <param name="services">Collection of service descriptors</param>
-        /// <param name="configuration">Configuration of the application</param>
-        void ConfigureServices(IServiceCollection services, IConfiguration configuration);
+        void ConfigureServices(IServiceCollection services,
+                               IConfiguration configuration,
+                               AppSettings appSettings);
 
         /// <summary>
         /// Configure HTTP request pipeline
         /// </summary>
-        /// <param name="application">Builder for configuring an application's request pipeline</param>
-        void ConfigureRequestPipeline(IApplicationBuilder application, IWebHostEnvironment environment);
+        void ConfigureRequestPipeline(IApplicationBuilder application,
+                                      IWebHostEnvironment environment,
+                                      AppSettings appSettings);
 
         /// <summary>
         /// Resolve dependency

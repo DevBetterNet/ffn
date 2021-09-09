@@ -48,6 +48,7 @@ namespace Dev.Plugin.Data.EFCore.Data
             _staticCacheManager = staticCacheManager;
         }
         #endregion
+
         #region Utilities
 
         /// <summary>

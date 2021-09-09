@@ -8,9 +8,6 @@ namespace Dev.Core.Infrastructure
         /// <summary>
         /// Register services and interfaces
         /// </summary>
-        /// <param name="services">Collection of service descriptors</param>
-        /// <param name="typeFinder">Type finder</param>
-        /// <param name="appSettings">App settings</param>
         void Register(IServiceCollection services, ITypeFinder typeFinder, AppSettings appSettings);
 
         /// <summary>

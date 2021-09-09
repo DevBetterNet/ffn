@@ -1,6 +1,5 @@
 ﻿using Dev.Core;
 using Dev.Core.Domain.WebApps;
-using Dev.Core.Infrastructure;
 using Dev.Data;
 using Dev.Services.WebApps;
 using Microsoft.AspNetCore.Http;
@@ -20,6 +19,7 @@ namespace Dev.Api.Framework
         private WebApp _cachedWebApp;
         private Guid _cachedActiveWebAppScopeConfiguration;
         #endregion
+
         #region Ctor
 
         /// <summary>
