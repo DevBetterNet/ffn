@@ -3,75 +3,32 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Chitmeo</title>
+	<title>Dev</title>
 	<link rel="stylesheet" href="@Url.Content($"~/lib/bootstrap/css/bootstrap.min.css")" />
 	<link rel="stylesheet" href="@Url.Content($"~/css/site.css")" />
 </head>
 <body>
-	<!--navigation-->
-	@*<section class="smart-scroll">
-		<div class="container-fluid">
-		<nav class="navbar navbar-expand-md navbar-dark">
-		<a class="navbar-brand heading-black" href="@Url.Action("Index","Home") ">
-		Chitmeo
-		</a>
-		<button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
-		data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-		aria-label="Toggle navigation">
-		<span data-feather="grid"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-		<ul class="navbar-nav ml-auto">
-		<li class="nav-item">
-		<a class="nav-link page-scroll" href="@Url.Action("Index","Home", new { Area = "Blog" })">Blog</a>
-		</li>
-		</ul>
-		</div>
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-		<ul class="navbar-nav ml-auto">
-		<li class="nav-item">
-		<a class="nav-link page-scroll" href="@Url.Action("Index","Home", new { Area = "UFD" })">Utility online</a>
-		</li>
-		</ul>
-		</div>
-		</nav>
-		</div>
-		</section>*@
 
 	<nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Expand at sm</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+			<a class="navbar-brand" href="#">Home</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<div class="collapse navbar-collapse" id="navbarsExample03">
+			<div class="collapse navbar-collapse" id="navbars">
 				<ul class="navbar-nav me-auto mb-2 mb-sm-0">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">Home</a>
+						<a class="nav-link" href="@Url.Action("Index","Home", new { Area = "Blog" })">Blog</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+						<a class="nav-link" href="@Url.Action("Index","Home", new { Area = "UFD" })">Utility online</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-						<ul class="dropdown-menu" aria-labelledby="dropdown03">
-							<li><a class="dropdown-item" href="#">Action</a></li>
-							<li><a class="dropdown-item" href="#">Another action</a></li>
-							<li><a class="dropdown-item" href="#">Something else here</a></li>
-						</ul>
-					</li>
+
 				</ul>
-				<form>
-					<input class="form-control" type="text" placeholder="Search" aria-label="Search">
-				</form>
 			</div>
 		</div>
 	</nav>
-
 
 	<div class="container">
 		<main role="main" class="pb-3">
@@ -83,7 +40,12 @@
 		<div class="container">
 		</div>
 	</footer>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+	<script src="@Url.Content("~/lib/bootstrap/js/bootstrap.min.js")"> </script>
+
+
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168736414-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
