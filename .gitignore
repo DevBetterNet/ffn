@@ -338,4 +338,6 @@ webapi/src/Dev.Api/Plugins/*
 !webapi/src/Dev.Api/Plugins/bin
 
 webapp/Dev.Web.HostCreator/Areas/*
-/webapi/src/Dev.Api/Plugins/bin
+webapp/Dev.Web.HostCreator/wwwroot/*
+!webapp/Dev.Web.HostCreator/wwwroot/js
+!webapp/Dev.Web.HostCreator/wwwroot/css
