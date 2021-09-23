@@ -15,12 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\apps\Dev.Web.Blog\Dev.Web.Blog.csproj" />
+    <ProjectReference Include="..\apps\Dev.Web.Shop\Dev.Web.Shop.csproj" />
     <ProjectReference Include="..\apps\Dev.Web.UFD\Dev.Web.UFD.csproj" />
     <ProjectReference Include="..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Areas\UFD\Views\FamilyDay\Index.cshtml" />
-    <None Include="Areas\UFD\Views\StringGenerator\Index.cshtml" />
   </ItemGroup>
 </Project>

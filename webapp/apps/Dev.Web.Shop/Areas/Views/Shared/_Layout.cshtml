@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Tiệm Cô Tít - Trang chủ</title>
+
+	<!-- App Icons -->
+	<link rel="apple-touch-icon" sizes="57x57" href="@Url.Content($"~/shop/images/icons/apple-icon-57x57.png")">
+	<link rel="apple-touch-icon" sizes="60x60" href="@Url.Content($"~/shop/images/icons/apple-icon-60x60.png")">
+	<link rel="apple-touch-icon" sizes="72x72" href="@Url.Content($"~/shop/images/icons/apple-icon-72x72.png")">
+	<link rel="apple-touch-icon" sizes="76x76" href="@Url.Content($"~/shop/images/icons/apple-icon-76x76.png")">
+	<link rel="apple-touch-icon" sizes="114x114" href="@Url.Content($"~/shop/images/icons/apple-icon-114x114.png")">
+	<link rel="apple-touch-icon" sizes="120x120" href="@Url.Content($"~/shop/images/icons/apple-icon-120x120.png")">
+	<link rel="apple-touch-icon" sizes="144x144" href="@Url.Content($"~/shop/images/icons/apple-icon-144x144.png")">
+	<link rel="apple-touch-icon" sizes="152x152" href="@Url.Content($"~/shop/images/icons/apple-icon-152x152.png")">
+	<link rel="apple-touch-icon" sizes="180x180" href="@Url.Content($"~/shop/images/icons/apple-icon-180x180.png")">
+	<link rel="icon" type="image/png" sizes="192x192" href="@Url.Content($"~/shop/images/icons/android-icon-192x192.png")">
+	<link rel="icon" type="image/png" sizes="512x512" href="@Url.Content($"~/shop/images/icons/android-icon-512x512.png")">
+	<link rel="icon" type="image/png" sizes="32x32" href="@Url.Content($"~/shop/images/icons/favicon-32x32.png")">
+	<link rel="icon" type="image/png" sizes="96x96" href="@Url.Content($"~/shop/images/icons/favicon-96x96.png")">
+	<link rel="icon" type="image/png" sizes="16x16" href="@Url.Content($"~/shop/images/icons/favicon-16x16.png")">
+
+	<link href="@Url.Content($"~/shop/css/preloader.css")" type="text/css" rel="stylesheet" media="screen" />
+
+	<link href="@Url.Content($"~/shop/libs/materialize/materialize.min.css")" type="text/css" rel="stylesheet" media="screen" />
+	<link href="@Url.Content($"~/shop/libs/fonts/mdi/appicon/appicon.css")" type="text/css" rel="stylesheet" media="screen" />
+	<link href="@Url.Content($"~/shop/libs/fonts/mdi/materialdesignicons.min.css")" type="text/css" rel="stylesheet" media="screen" />
+	<link href="@Url.Content($"~/shop/libs/perfect-scrollbar/perfect-scrollbar.css")" type="text/css" rel="stylesheet" media="screen" />
+	<link href="@Url.Content($"~/shop/libs/fancybox/jquery.fancybox.min.css")" rel="stylesheet" type="text/css" media="screen" />
+	<link href="@Url.Content($"~/shop/css/style.css")" type="text/css" rel="stylesheet" media="screen" id="main-style" />
+</head>
+<body class="html" data-header="light" data-footer="dark" data-header_align="center" data-menu_type="left" data-menu="light" data-menu_icons="on" data-footer_type="left" data-site_mode="light" data-footer_menu="show" data-footer_menu_style="light">
+	<div class="preloader-background">
+		<div class="preloader-wrapper">
+			<div class="orig">
+
+				<div class="dot orig three "></div>
+				<div class="dot orig two "></div>
+				<div class="dot orig one "></div>
+			</div>
+
+		</div>
+	</div>
+
+	@await Html.PartialAsync("_Navigation.cshtml")
+
+	<div class="content-area">
+		@RenderBody()
+
+		@await Html.PartialAsync("_Footer.cshtml")
+	</div>
+
+	@*<script src="@Url.Content($"~/shop/js/pwa.js")"></script>*@
+	<script src="@Url.Content($"~/shop/libs/jquery/jquery-2.2.4.min.js")"></script>
+	<script src="@Url.Content($"~/shop/libs/materialize/materialize.js")"></script>
+	<script src="@Url.Content($"~/shop/libs/perfect-scrollbar/perfect-scrollbar.min.js")"></script>
+	<script src="@Url.Content($"~/shop/js/variables.js")"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+		  $(".carousel-fullscreen.carousel-slider").carousel({
+			fullWidth: true,
+			indicators: true
+		  });
+		  setTimeout(autoplay, 3500);
+		  function autoplay() {
+			$(".carousel").carousel("next");
+			setTimeout(autoplay, 3500);
+		  }
+		  $(".slider8").slider({
+			indicators: false,
+			height: 210,
+		  });
+
+		});
+	</script>
+	@*<script src="assets/js/common.html"></script>*@
+	<script src="@Url.Content($"~/shop/libs/app/init.js")"></script>
+	<script src="@Url.Content($"~/shop/libs/app/settings.js")"></script>
+	<script src="@Url.Content($"~/shop/libs/app/scripts.js")"></script>
+	<script src="@Url.Content($"~/shop/js/preloader.js")"></script>
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168736414-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-168736414-1');
+	</script>
+</body>
+</html>
