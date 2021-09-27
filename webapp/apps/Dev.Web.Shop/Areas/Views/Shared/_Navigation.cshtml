@@ -1,7 +1,6 @@
-﻿<!-- START navigation -->
-<nav class="fix_topscroll logo_on_fixed  topbar navigation">
+﻿<nav class="fix_topscroll logo_on_fixed  topbar navigation">
 	<div class="nav-wrapper container">
-		<a id="logo-container" href="#" class=" brand-logo">Tiệm Cô Tít</a>
+		<a id="logo-container" href="@Url.Action("Index","Home")" class=" brand-logo">Tiệm Cô Tít</a>
 
 		<a href="#" data-target="" class="waves-effect waves-circle navicon back-button htmlmode show-on-large ">
 			<i class="mdi mdi-arrow-left" data-page=""></i>
@@ -20,15 +19,16 @@
 		<a href="#" data-target="" class="waves-effect waves-circle navicon right nav-site-mode show-on-large">
 			<i class="mdi mdi-invert-colors mdi-transition1"></i>
 		</a>
-		<!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
 	</div>
 </nav>
+
+
 <ul id="slide-nav" class="sidenav sidemenu">
 	<li class="user-wrap">
 		<div class="user-view row">
 
 			<div class="col s9 infoarea">
-				<a href="ui-app-profile.html"><span class="name">Tracy Nguyen</span></a>
+				<a href="@Url.Action("Profile", "Account")"><span class="name">Tracy Nguyen</span></a>
 				<a href="#"><span class="email">tracynguyensaigon@gmail.com</span></a>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			</li>
 			<li class="lvl1 ">
 				<div class=" waves-effect   ui-app-products-home ">
-					<a href="ui-app-profile.html">
+					<a href="@Url.Action("Profile", "Account")">
 						<i class="mdi mdi-widgets   "></i>
 						<span class="title">Tài khoản của tôi</span>
 					</a>
@@ -64,7 +64,7 @@
 			</li>
 			<li class="lvl1 ">
 				<div class=" waves-effect  active ui-app-products-home ">
-					<a href="ui-app-products-cart.html">
+					<a href="@Url.Action("Cart", "Product")">
 						<i class="mdi mdi-cart-outline"></i>
 						<span class="title">Giỏ hàng</span>
 					</a>
@@ -72,7 +72,7 @@
 			</li>
 			<li class="lvl1 ">
 				<div class=" waves-effect   ui-app-products-home ">
-					<a href="sub-apps-wallet.html">
+					<a href="@Url.Action("Index", "Wallet")">
 						<i class="mdi mdi-wallet"></i>
 						<span class="title">Thanh toán</span>
 					</a>
@@ -80,7 +80,7 @@
 			</li>
 			<li class="lvl1 ">
 				<div class=" waves-effect   ui-app-products-home ">
-					<a href="ui-app-blog-home.html">
+					<a href="@Url.Action("Index", "Blog")">
 						<i class="mdi mdi-square-edit-outline"></i>
 						<span class="title">Thông tin sản phẩm</span>
 					</a>
@@ -110,7 +110,7 @@
 			</li>
 			<li class="lvl1 ">
 				<div class="waves-effect ">
-					<a href="ui-app-chat.html">
+					<a href="@Url.Action("Index", "Chat")">
 						<i class="mdi mdi-message-text-outline"></i>
 						<span class="title">Chat</span>
 					</a>
@@ -127,9 +127,6 @@
 	</li>
 </ul>
 
-
-
-<!-- END navigation -->
 <ul id="slide-settings" class="sidenav sidesettings ">
 	<li class="menulinks">
 		<ul class="collapsible">
@@ -270,7 +267,6 @@
 			<li class="sep-wrap">
 				<div class="divider"></div>
 			</li>
-			<!-- Menu Settings End-->
 		</ul>
 	</li>
 </ul>

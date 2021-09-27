@@ -10,13 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Dev\Dev.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ViewFiles Include="Areas\Views\**\*.cshtml" />
     <ContentFiles Include="Areas\Content\**\*.*" />
     <ContentMinFiles Include="Areas\Content\**\*.min.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
   </ItemGroup>
 
 

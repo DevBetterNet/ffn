@@ -14,6 +14,19 @@
     <ContentFiles Include="Areas\Content\**\*.*" />
     <ContentMinFiles Include="Areas\Content\**\*.min.*" />
   </ItemGroup>
+    
+  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
+  </ItemGroup>
+
+
+  <Target Name="CopyViews" AfterTargets="Build">
+    <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\Shop\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\shop\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ContentMinFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\shop\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
+  </Target>
 
   <ItemGroup>
     <Content Include="Areas\Content\css\preloader.css" />
@@ -484,15 +497,4 @@
     <Content Include="Areas\Content\libs\materialize\nouislider.css" />
     <Content Include="Areas\Content\libs\perfect-scrollbar\perfect-scrollbar.css" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
-  </ItemGroup>
-
-
-  <Target Name="CopyViews" AfterTargets="Build">
-    <Copy SourceFiles="@(ViewFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\Areas\Shop\Views\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(ContentFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\shop\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(ContentMinFiles)" DestinationFiles="..\..\Dev.Web.HostCreator\wwwroot\shop\%(RecursiveDir)%(Filename)%(Extension)" SkipUnchangedFiles="true" />
-  </Target>
 </Project>

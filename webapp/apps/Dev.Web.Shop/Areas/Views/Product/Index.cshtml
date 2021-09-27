@@ -1,75 +1,79 @@
-﻿<div class="carousel carousel-fullscreen carousel-slider home_carousel carousel-products-home">
+﻿<div class="carousel carousel-fullscreen carousel-slider home_carousel carousel-products-home" style="height: 400px;">
 
-	<a class="carousel-item" href="#carousel-slide-0!">
-		<div class="bg" style="background-image: url('@Url.Content($"~/shop/images/product-19.jpg")')"></div>
+	<a class="carousel-item" href="#carousel-slide-0!" style="z-index: -1; opacity: 1; visibility: visible; transform: translateX(0px) translateX(1903px) translateZ(0px);">
+		<div class="bg" style="background-image: url('@Url.Content("~/shop/images/product-19.jpg")')"></div>
 		<div class="item-content center-align white-text">
 			<div class="spacer-large"></div>
 			<h3>Gia dụng tiện ích</h3>
 			<h5 class="light white-text">Chất lượng vượt trội</h5>
 		</div>
 	</a>
-	<a class="carousel-item" href="#carousel-slide-1!">
-		<div class="bg" style="background-image: url('@Url.Content($"~/shop/images/product-20.jpg")'"></div>
+	<a class="carousel-item" href="#carousel-slide-1!" style="transform: translateX(0px) translateX(-3806px) translateZ(0px); z-index: -2; opacity: 1; visibility: visible;">
+		<div class="bg" style="background-image: url('@Url.Content("~/shop/images/product-20.jpg")')"></div>
 		<div class="item-content center-align white-text">
 			<div class="spacer-large"></div>
 			<h3>Nội thất thông minh</h3>
 			<h5 class="light white-text">Kiểu dáng hiện đại</h5>
 		</div>
 	</a>
-	<a class="carousel-item" href="#carousel-slide-2!">
-		<div class="bg" style="background-image: url('@Url.Content($"~/shop/images/product-2a.jpg")')"></div>
+	<a class="carousel-item" href="#carousel-slide-2!" style="transform: translateX(0px) translateX(-1903px) translateZ(0px); z-index: -1; opacity: 1; visibility: visible;">
+		<div class="bg" style="background-image: url('@Url.Content("~/shop/images/product-2a.jpg")')"></div>
 		<div class="item-content center-align white-text">
 			<div class="spacer-large"></div>
 			<h3>Đồ trang trí tinh tế</h3>
 			<h5 class="light white-text">Phong cách ấn tượng</h5>
 		</div>
 	</a>
-	<a class="carousel-item" href="#carousel-slide-3!">
-		<div class="bg" style="background-image: url('@Url.Content($"~/shop/images/product-9.jpg")')"></div>
+	<a class="carousel-item active" href="#carousel-slide-3!" style="transform: translateX(0px) translateX(0px) translateX(0px) translateZ(0px); z-index: 0; opacity: 1; visibility: visible;">
+		<div class="bg" style="background-image: url('@Url.Content("~/shop/images/product-9.jpg")')"></div>
 		<div class="item-content center-align white-text">
 			<div class="spacer-large"></div>
 			<h3>Hàng tiêu dùng</h3>
 			<h5 class="light white-text">Giá cả hợp lý</h5>
 		</div>
 	</a>
+
+	<ul class="indicators"><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item"></li><li class="indicator-item active"></li></ul>
 </div>
 
 <div class="container">
 	<div class="section">
+
 		<div class="row ">
 			<div class="col s12 pad-0">
-				<h5 class="bot-20 sec-tit">Sản phẩm tiêu biểu</h5>
-				<div class="row ui-mediabox prods prods-boxed">
+				<h5 class="bot-20 sec-tit  ">Sản phẩm tiêu biểu</h5>
+				<div class="row ui-mediabox  prods prods-boxed     ">
 
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
 
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-1.jpg")" data-fancybox="images"
-							   data-caption="Women Shoes">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-1.jpg")">
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-1.jpg")" data-fancybox="images" data-caption="Women Shoes">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-1.jpg")">
 							</a>
+
 						</div>
 						<div class="prod-info  boxed z-depth-1">
-							<a href="@Url.Action("Detail","Product")">
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Bếp ga du lịch </h5>
-							</a>
-							<span class="small brand">Dr. HOWS</span>
+							</a> <span class="small brand">Dr. HOWS</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">1.980.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='size'><span>6</span><span>7</span><span>8</span><span>9</span></div>
-								<div class='color'>
-									<span style='background-color:#f06292;'>&nbsp;</span>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-									<span style='background-color:#aed581;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="size"><span>6</span><span>7</span><span>8</span><span>9</span></div>
+								<div class="color"><span style="background-color:#f06292;">&nbsp;</span><span style="background-color:#4db6ac;">&nbsp;</span><span style="background-color:#aed581;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
 
 						</div>
 					</div>
@@ -77,156 +81,195 @@
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
 
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-2.jpg")" data-fancybox="images" data-caption="Home Decor Balls">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-2.jpg")">
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-2.jpg")" data-fancybox="images" data-caption="Home Decor Balls">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-2.jpg")">
 							</a>
+
+
+
 						</div>
 						<div class="prod-info  boxed z-depth-1">
-							<a href="@Url.Action("Detail","Product")">
+
+
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Cốc sứ vẽ tay </h5>
 							</a> <span class="small brand">Cherry</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">122.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='options'><span>5</span><span>7</span><span>9</span></div>
-								<div class='color'>
-									<span style='background-color:#aed581;'>&nbsp;</span>
-									<span style='background-color:#ff8a65;'>&nbsp;</span>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="options"><span>5</span><span>7</span><span>9</span></div>
+								<div class="color"><span style="background-color:#aed581;">&nbsp;</span><span style="background-color:#ff8a65;">&nbsp;</span><span style="background-color:#4db6ac;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
 
 						</div>
 					</div>
 
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-3.jpg")" data-fancybox="images"
-							   data-caption="Women Sandals">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-3.jpg")">
+
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-3.jpg")" data-fancybox="images" data-caption="Women Sandals">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-3.jpg")">
 							</a>
+
+
 
 						</div>
 						<div class="prod-info  boxed z-depth-1">
-							<a href="@Url.Action("Detail","Product")">
+
+
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Muỗng gỗ con cá </h5>
 							</a> <span class="small brand">Sakura</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">58.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='size'><span>6</span><span>7</span><span>8</span><span>9</span></div>
-								<div class='color'>
-									<span style='background-color:#f06292;'>&nbsp;</span>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-									<span style='background-color:#ff8a65;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="size"><span>6</span><span>7</span><span>8</span><span>9</span></div>
+								<div class="color"><span style="background-color:#f06292;">&nbsp;</span><span style="background-color:#4db6ac;">&nbsp;</span><span style="background-color:#ff8a65;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
+
 						</div>
 					</div>
 
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-4.jpg")" data-fancybox="images"
-							   data-caption="Modern Man Shoes">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-4.jpg")">
+
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-4.jpg")")" data-fancybox="images" data-caption="Modern Man Shoes">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-4.jpg")">
 							</a>
+
+
+
 						</div>
 						<div class="prod-info  boxed z-depth-1">
 
-							<a href="@Url.Action("Detail","Product")">
+
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Máy nướng bánh mỳ </h5>
 							</a> <span class="small brand">Bear</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">532.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='size'><span>6</span><span>7</span><span>8</span><span>9</span></div>
-								<div class='color'>
-									<span style='background-color:#ff8a65;'>&nbsp;</span>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-									<span style='background-color:#aed581;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="size"><span>6</span><span>7</span><span>8</span><span>9</span></div>
+								<div class="color"><span style="background-color:#ff8a65;">&nbsp;</span><span style="background-color:#4db6ac;">&nbsp;</span><span style="background-color:#aed581;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
 
 						</div>
 					</div>
 
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-5.jpg")" data-fancybox="images"
-							   data-caption="Wooden Chair">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-5.jpg")">
+
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-5.jpg")" data-fancybox="images" data-caption="Wooden Chair">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-5.jpg")">
 							</a>
+
+
+
 						</div>
 						<div class="prod-info  boxed z-depth-1">
-							<a href="@Url.Action("Detail","Product")">
+
+
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Đĩa gốm thuỷ mạc </h5>
 							</a> <span class="small brand">Ichiban</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">280.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='size'><span>1</span><span> 2</span><span> 4</span></div>
-								<div class='color'>
-									<span style='background-color:#f06292;'>&nbsp;</span>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-									<span style='background-color:#ff8a65;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="size"><span>1</span><span> 2</span><span> 4</span></div>
+								<div class="color"><span style="background-color:#f06292;">&nbsp;</span><span style="background-color:#4db6ac;">&nbsp;</span><span style="background-color:#ff8a65;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
+
 						</div>
 					</div>
 
 					<div class="col s6 ">
 						<div class="prod-img-wrap">
-							<a class="img-wrap" href="@Url.Content($"~/shop/images/product-6.jpg")" data-fancybox="images"
-							   data-caption="Canvas Shoes">
-								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content($"~/shop/images/product-6.jpg")">
+
+							<a class="img-wrap" href="@Url.Content("~/shop/images/product-6.jpg")" data-fancybox="images" data-caption="Canvas Shoes">
+								<img alt="image" class="z-depth-1" style="width: 100%;" src="@Url.Content("~/shop/images/product-6.jpg")">
 							</a>
+
+
+
 						</div>
 						<div class="prod-info  boxed z-depth-1">
-							<a href="@Url.Action("Detail","Product")">
+
+
+							<a href="@Url.Action("Detail","Product:)">
 								<h5 class="title truncate">Bộ đồ ăn inox </h5>
 							</a> <span class="small brand">Luna</span>
 							<div class="spacer-line"></div>
 							<h5 class="bot-0 price">138.000</h5>
 							<div class="spacer-line"></div>
 
-							<div class='prod-options products'>
-								<div class='size'><span>6</span><span>7</span><span>8</span><span>9</span></div>
-								<div class='color'>
-									<span style='background-color:#4db6ac;'>&nbsp;</span>
-									<span style='background-color:#ff8a65;'>&nbsp;</span>
-									<span style='background-color:#aed581;'>&nbsp;</span>
-								</div>
+							<div class="prod-options products">
+								<div class="size"><span>6</span><span>7</span><span>8</span><span>9</span></div>
+								<div class="color"><span style="background-color:#4db6ac;">&nbsp;</span><span style="background-color:#ff8a65;">&nbsp;</span><span style="background-color:#aed581;">&nbsp;</span></div>
 							</div>
 							<div class="spacer-line"></div>
+
+
 							<span class="addtocart btn-small">Cho vào giỏ</span>
+
 							<span class="addtowishlist btn-small">Yêu thích</span>
+
+
 							<div class="spacer-line"></div>
+
+
 						</div>
 					</div>
+
+
+
 				</div>
 
 			</div>
@@ -275,11 +318,17 @@
 	</div>
 </div>
 
-
 <div class="container">
 	<div class="section">
+
+
+
+
+
 		<div class="spacer"></div>
 		<h5 class="center bot-20 sec-tit">Đánh giá của khách hàng</h5>
+
+
 		<div class="slider slider8 testi-boxed z-depth-1  white-text primary-bg " style="height: 210px;">
 			<ul class="slides transparent testimonials " style="height: 210px;">
 
@@ -294,20 +343,23 @@
 							<div class="left-align">
 								<span class="name">
 									<strong>Anh Vũ</strong>
-									<br><span class="small position">Thủ Đức,HCM.</span> 
+									<br><span class="small position">Thủ Đức,HCM.</span>
 								</span>
 							</div>
 						</div>
 					</div>
+
+
+
 				</li>
-				<li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px);">
+				<li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
 					<p class="center">
 						<i class="mdi mdi-format-quote-open"></i>Do vận chuyển lô hàng của tôi bị vỡ mất 2 sản phẩm.
 						Tuy nhiên sau đó tôi được các bạn bán hàng nhiệt tình gửi lại sản phẩm với thái độ rất ân cần.<i class="mdi mdi-format-quote-close"></i>
 					</p>
 					<div class="center-align">
 						<div class="row userinfo">
-							<img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" class="circle responsive-img" style="background-image: url(&quot; @Url.Content("~/shop/images/user-12.jpg") &quot;);">
+							<img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" class="circle responsive-img" style="background-image: url(&quot;@Url.Content("~/shop/images/user-12.jpg")&quot;);">
 							<div class="left-align">
 								<span class="name">
 									<strong>Hoài Nam</strong>
@@ -316,8 +368,11 @@
 							</div>
 						</div>
 					</div>
+
+
+
 				</li>
-				<li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
+				<li class="active" style="opacity: 1; transform: translateX(0px) translateY(0px);">
 					<p class="center">
 						<i class="mdi mdi-format-quote-open"></i>Đây là một trong những địa chỉ bán hàng online
 						có uy tín nhất mà tôi từng biết. Thái độ phục vụ khách hàng tận tâm, thân thiện. Sẽ giới thiệu
@@ -325,7 +380,7 @@
 					</p>
 					<div class="center-align">
 						<div class="row userinfo">
-							<img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" class="circle responsive-img" style="background-image: url(&quot; @Url.Content("~/shop/images/user-30.jpg") &quot;);">
+							<img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image" class="circle responsive-img" style="background-image: url(&quot;@Url.Content("~/shop/images/user-30.jpg")&quot;);">
 							<div class="left-align">
 								<span class="name">
 									<strong>Linh Chi</strong>
@@ -337,5 +392,9 @@
 				</li>
 			</ul>
 		</div>
+
+
 	</div>
 </div>
+<div class="spacer"></div>
+
