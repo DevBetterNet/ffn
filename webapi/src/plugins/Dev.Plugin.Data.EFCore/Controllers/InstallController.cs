@@ -1,5 +1,4 @@
 ﻿using Dev.Plugin.Data.EFCore.Data;
-using Dev.WebApiFramework.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Dev.Plugin.Data.EFCore.Controllers

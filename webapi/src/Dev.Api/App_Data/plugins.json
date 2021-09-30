@@ -12,6 +12,10 @@
       "Version": "0.0.1"
     },
     {
+      "SystemName": "App.Shop",
+      "Version": "0.0.1"
+    },
+    {
       "SystemName": "Sys.Auth",
       "Version": "0.0.1"
     }
