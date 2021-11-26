@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <!--When true, compiles and emits the Razor assembly as part of publishing the project-->
     <RazorCompileOnPublish>false</RazorCompileOnPublish>
@@ -14,9 +14,7 @@
     <ContentFiles Include="Areas\Content\**\*.*" />
     <ContentMinFiles Include="Areas\Content\**\*.min.*" />
   </ItemGroup>
-    
-  
-  
+
   <ItemGroup>
     <ProjectReference Include="..\..\Dev.Web.Framework\Dev.Web.Framework.csproj" />
   </ItemGroup>
@@ -496,5 +494,9 @@
     <Content Include="Areas\Content\libs\materialize\materialize.min.css" />
     <Content Include="Areas\Content\libs\materialize\nouislider.css" />
     <Content Include="Areas\Content\libs\perfect-scrollbar\perfect-scrollbar.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Content\scss\" />
   </ItemGroup>
 </Project>

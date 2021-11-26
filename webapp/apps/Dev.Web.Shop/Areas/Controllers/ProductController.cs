@@ -33,5 +33,15 @@ namespace Dev.Web.Shop.Areas.Controllers
         {
             return View();
         }
+
+        public IActionResult Cart()
+        {
+            return View(); 
+        }
+
+        public IActionResult Invoice()
+        {
+            return View();
+        }
     }
 }

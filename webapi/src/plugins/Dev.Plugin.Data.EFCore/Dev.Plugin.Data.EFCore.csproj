@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <OutputPath>..\..\Dev.Api\Plugins\Dev.Plugin.Data.EFCore</OutputPath>
     <OutDir>$(OutputPath)</OutDir>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
@@ -12,7 +12,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <ClearPluginAssemblies Include="$(MSBuildProjectDirectory)\..\..\Build\ClearPluginAssemblies.proj" />
-    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.1" /> 
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.0-rc.1" />
+   
     <ProjectReference Include="..\..\Dev.Api.Framework\Dev.Api.Framework.csproj" />
   </ItemGroup>
 
