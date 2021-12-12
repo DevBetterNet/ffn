@@ -8,9 +8,7 @@ using System.Linq;
 
 namespace Dev.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class PluginController : ControllerBase
+    public class PluginController : PublicController
     {
         #region Fields
 

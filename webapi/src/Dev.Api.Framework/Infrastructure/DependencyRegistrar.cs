@@ -3,6 +3,7 @@ using Dev.Core.Caching;
 using Dev.Core.Configuration;
 using Dev.Core.Infrastructure;
 using Dev.Services.Configuration;
+using Dev.Services.Localization;
 using Dev.Services.Users;
 using Dev.Services.WebApps;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,7 +33,7 @@ namespace Dev.Api.Framework.Infrastructure
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ISettingService, SettingService>();
             services.AddScoped<IWebAppService, WebAppService>();
-
+            services.AddScoped<ILanguageService, LanguageService>();
 
             //register all settings
             var settings = typeFinder.FindClassesOfType(typeof(ISettings), false).ToList();
