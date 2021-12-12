@@ -7,7 +7,7 @@ namespace Dev
     /// Represents errors that occur during application execution
     /// </summary>
     [Serializable]
-    public class DevException : Exception
+        public class DevException : Exception
     {
         /// <summary>
         /// Initializes a new instance of the Exception class.
