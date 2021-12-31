@@ -2,7 +2,7 @@
 
 namespace Dev.Api.Model.Plugin
 {
-    public class LoadedAssemblyModel
+    public record LoadedAssemblyModel
     {
         public string FullName { get; set; }
         public string Location { get; set; }

@@ -16,7 +16,8 @@ namespace Dev.Core
 
         public SecureRandomNumberGenerator()
         {
-            _rng = new RNGCryptoServiceProvider();
+            //_rng = new RNGCryptoServiceProvider();
+            _rng = RandomNumberGenerator.Create();
         }
 
         #endregion Ctor

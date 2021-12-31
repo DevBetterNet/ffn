@@ -32,8 +32,10 @@ namespace Dev.Api.Framework.Infrastructure
             //services
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ISettingService, SettingService>();
+            services.AddScoped<IWebAppMappingService, WebAppMappingService>();
             services.AddScoped<IWebAppService, WebAppService>();
             services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<ILocalizationService, LocalizationService>();
 
             //register all settings
             var settings = typeFinder.FindClassesOfType(typeof(ISettings), false).ToList();

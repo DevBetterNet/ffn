@@ -1,0 +1,17 @@
+﻿<Window x:Class="Dev.Wpf.HostCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dev.Wpf.HostCreator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="buttonLogin" Content="Login" HorizontalAlignment="Left" Margin="302,0,0,0" VerticalAlignment="Center" Height="37" Width="126" Click="buttonLogin_Click"/>
+        <TextBox x:Name="textUserName" HorizontalAlignment="Left" Margin="265,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+        <TextBox x:Name="textPassword" HorizontalAlignment="Left" Margin="265,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
+        <Label Content="User Name:" HorizontalAlignment="Left" Margin="172,91,0,0" VerticalAlignment="Top"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="172,133,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -16,9 +16,11 @@ namespace Dev.Services.Users
         #endregion
 
         #region Ctor
-        public UserService(IRepository<User> userRepository)
+        public UserService(IRepository<User> userRepository,
+                           ILocalizationService localizationService)
         {
             _userRepository = userRepository;
+            _localizationService = localizationService;
         }
         #endregion
 

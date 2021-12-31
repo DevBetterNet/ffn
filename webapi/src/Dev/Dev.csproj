@@ -3,15 +3,18 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0" />
-    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="6.0.0-preview.5.21301.5" />
-    <PackageReference Include="System.Linq.Async" Version="5.0.0" />
+    <Compile Remove="Services\Common\**" />
+    <EmbeddedResource Remove="Services\Common\**" />
+    <None Remove="Services\Common\**" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\Common\" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+    <PackageReference Include="System.IO.FileSystem.AccessControl" Version="6.0.0-preview.5.21301.5" />
+    <PackageReference Include="System.Linq.Async" Version="5.1.0" />
   </ItemGroup>
 </Project>
