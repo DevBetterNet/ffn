@@ -2,25 +2,24 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Dev.Core
+namespace Dev.Core;
+
+public interface IWebAppContext
 {
-    public interface IWebAppContext
-    {
-        /// <summary>
-        /// Gets the current store
-        /// </summary>
-        /// <returns>A task that represents the asynchronous operation</returns>
-        Task<WebApp> GetCurrentWebAppAsync();
+    /// <summary>
+    /// Gets the current store
+    /// </summary>
+    /// <returns>A task that represents the asynchronous operation</returns>
+    Task<WebApp> GetCurrentWebAppAsync();
 
-        /// <summary>
-        /// Gets the current store
-        /// </summary>
-        WebApp GetCurrentWebApp();
+    /// <summary>
+    /// Gets the current store
+    /// </summary>
+    WebApp GetCurrentWebApp();
 
-        /// <summary>
-        /// Gets active store scope configuration
-        /// </summary>
-        /// <returns>A task that represents the asynchronous operation</returns>
-        Task<Guid> GetActiveWebAppScopeConfigurationAsync();
-    }
+    /// <summary>
+    /// Gets active store scope configuration
+    /// </summary>
+    /// <returns>A task that represents the asynchronous operation</returns>
+    Task<Guid> GetActiveWebAppScopeConfigurationAsync();
 }

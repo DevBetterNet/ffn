@@ -1,6 +1,5 @@
-﻿namespace Dev.Core.Configuration
+﻿namespace Dev.Core.Configuration;
+
+public interface ISettings
 {
-    public interface ISettings
-    {
-    }
 }

@@ -5,30 +5,29 @@ using Dev.Plugin.Data.EFCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dev.Plugin.Data.EFCore.Infrastructure
+namespace Dev.Plugin.Data.EFCore.Infrastructure;
+
+public class DependencyRegistrar : IDependencyRegistrar
 {
-    public class DependencyRegistrar : IDependencyRegistrar
+    public int Order => 5;
+
+    public void Register(IServiceCollection services, ITypeFinder typeFinder, AppSettings appSettings)
     {
-        public int Order => 5;
-
-        public void Register(IServiceCollection services, ITypeFinder typeFinder, AppSettings appSettings)
+        //database
+        DbContextOptionsBuilder dbContextOptionsBuilder = new DbContextOptionsBuilder();
+        DatabaseConfig databaseConfig = new DatabaseConfig();
+        if (appSettings.AdditionalData.ContainsKey("Databases"))
         {
-            //database
-            DbContextOptionsBuilder dbContextOptionsBuilder = new DbContextOptionsBuilder();
-            DatabaseConfig databaseConfig = new DatabaseConfig();
-            if (appSettings.AdditionalData.ContainsKey("Databases"))
-            {
-                databaseConfig = appSettings.AdditionalData["Databases"].ToObject<DatabaseConfig>();
-            }
-
-            if (databaseConfig.DataProvider == "mysql")
-            {
-                dbContextOptionsBuilder.UseMySql(databaseConfig.DataConnectionString, ServerVersion.AutoDetect(databaseConfig.DataConnectionString));
-
-                services.AddScoped<IDevDbContext>(p => new DevDbContext(dbContextOptionsBuilder.Options));
-            }
-
-            services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
+            databaseConfig = appSettings.AdditionalData["Databases"].ToObject<DatabaseConfig>();
         }
+
+        if (databaseConfig.DataProvider == "mysql")
+        {
+            dbContextOptionsBuilder.UseMySql(databaseConfig.DataConnectionString, ServerVersion.AutoDetect(databaseConfig.DataConnectionString));
+
+            services.AddScoped<IDevDbContext>(p => new DevDbContext(dbContextOptionsBuilder.Options));
+        }
+
+        services.AddTransient(typeof(IRepository<>), typeof(EfRepository<>));
     }
 }

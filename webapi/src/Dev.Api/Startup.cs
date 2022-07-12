@@ -1,4 +1,3 @@
-using Dev.Core.Configuration;
 using Dev.WebApi.Framework.Infrastructure.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,42 +5,41 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace Dev.Api
+namespace Dev.Api;
+
+public class Startup
 {
-    public class Startup
+    #region Fields
+
+    private readonly IConfiguration _configuration;
+    private readonly IWebHostEnvironment _webHostEnvironment;
+
+    #endregion Fields
+
+    #region Ctor
+
+    public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
     {
-        #region Fields
+        _configuration = configuration;
+        _webHostEnvironment = webHostEnvironment;
+    }
 
-        private readonly IConfiguration _configuration;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+    #endregion Ctor
 
-        #endregion Fields
+    // This method gets called by the runtime. Use this method to add services to the container.
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.ConfigureApplicationServices(_configuration, _webHostEnvironment);
+    }
 
-        #region Ctor
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        app.ConfigureRequestPipeline(env);
 
-        public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
+        if (env.IsDevelopment())
         {
-            _configuration = configuration;
-            _webHostEnvironment = webHostEnvironment;
-        }
-
-        #endregion Ctor
-
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.ConfigureApplicationServices(_configuration, _webHostEnvironment);
-        }
-
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            app.ConfigureRequestPipeline(env);
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseDeveloperExceptionPage();
         }
     }
 }

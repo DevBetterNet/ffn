@@ -1,7 +1,6 @@
-﻿namespace Dev.Plugin.Sys.Auth.Configuration
+﻿namespace Dev.Plugin.Sys.Auth.Configuration;
+
+public class JwtConfig
 {
-    public class JwtConfig
-    {
-        public string Secret { get; set; } = "StrONGKAutHENTICATIONKEy";
-    }
+    public string Secret { get; set; } = "StrONGKAutHENTICATIONKEy";
 }

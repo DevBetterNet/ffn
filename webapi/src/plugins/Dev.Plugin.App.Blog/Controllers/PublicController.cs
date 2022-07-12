@@ -2,10 +2,9 @@
 using Dev.WebApiFramework.Controllers;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Dev.Plugin.App.Blog.Controllers
+namespace Dev.Plugin.App.Blog.Controllers;
+
+[Route("Blog/[controller]")]
+public class PublicController : BaseController
 {
-    [Route("Blog/[controller]")]
-    public class PublicController : BaseController
-    {
-    }
 }

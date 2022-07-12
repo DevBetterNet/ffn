@@ -1,7 +1,6 @@
-﻿namespace Dev.Core.Security
+﻿namespace Dev.Core.Security;
+
+public static class DevDataProtectionDefaults
 {
-    public static class DevDataProtectionDefaults
-    {
-        public static string DataProtectionKeysPath => "~/App_Data/DataProtectionKeys";
-    }
+    public static string DataProtectionKeysPath => "~/App_Data/DataProtectionKeys";
 }

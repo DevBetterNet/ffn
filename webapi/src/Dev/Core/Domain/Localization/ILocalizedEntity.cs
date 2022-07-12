@@ -1,6 +1,5 @@
-﻿namespace Dev.Core.Domain.Localization
+﻿namespace Dev.Core.Domain.Localization;
+
+public interface ILocalizedEntity
 {
-    public interface ILocalizedEntity
-    {
-    }
 }

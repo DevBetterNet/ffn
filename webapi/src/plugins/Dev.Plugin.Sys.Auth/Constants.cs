@@ -1,7 +1,6 @@
-﻿namespace Dev.Plugin.Sys.Auth
+﻿namespace Dev.Plugin.Sys.Auth;
+
+public class Constants
 {
-    public class Constants
-    {
-        public static readonly string PluginName = "Auth";
-    }
+    public static readonly string PluginName = "Auth";
 }

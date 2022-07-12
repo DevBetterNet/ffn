@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Dev.Core
+namespace Dev.Core;
+
+public abstract class BaseEntity
 {
-    public abstract class BaseEntity
-    {
-        public Guid Id { get; set; }
-    }
+    public Guid Id { get; set; }
 }

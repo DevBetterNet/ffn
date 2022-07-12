@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace Dev.Plugin.Sys.Auth.Authentication
+namespace Dev.Plugin.Sys.Auth.Authentication;
+
+public class ApplicationUser : IdentityUser
 {
-    public class ApplicationUser : IdentityUser
-    {
-    }
 }

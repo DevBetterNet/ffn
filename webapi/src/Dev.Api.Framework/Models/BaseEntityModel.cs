@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Dev.Api.Framework.Models
+namespace Dev.Api.Framework.Models;
+
+public record BaseEntityModel
 {
-    public record BaseEntityModel
-    {
-        public virtual Guid Id { get; set; }
-    }
+    public virtual Guid Id { get; set; }
 }

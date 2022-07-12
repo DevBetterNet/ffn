@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Dev.Data.Builder
+namespace Dev.Data.Builder;
+
+public interface IBuilderConfiguration
 {
-    public interface IBuilderConfiguration
-    {
-        void ApplyConfiguration(ModelBuilder modelBuilder);
-    }
+    void ApplyConfiguration(ModelBuilder modelBuilder);
 }

@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace Dev.Plugin.Sys.Auth.Models
+namespace Dev.Plugin.Sys.Auth.Models;
+
+public class AuthResult
 {
-    public class AuthResult
-    {
-        public string Token { get; set; }
-        public bool Success { get; set; }
-        public List<string> Errors { get; set; }
-    }
+    public string Token { get; set; }
+    public bool Success { get; set; }
+    public List<string> Errors { get; set; }
 }

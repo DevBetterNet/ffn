@@ -1,12 +1,11 @@
-﻿namespace Dev.Core.ComponentModel
+﻿namespace Dev.Core.ComponentModel;
+
+/// <summary>
+/// Reader/Write locker type
+/// </summary>
+public enum ReaderWriteLockType
 {
-    /// <summary>
-    /// Reader/Write locker type
-    /// </summary>
-    public enum ReaderWriteLockType
-    {
-        Read,
-        Write,
-        UpgradeableRead
-    }
+    Read,
+    Write,
+    UpgradeableRead
 }

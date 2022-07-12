@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace Dev.Core.Security
-{
-    public class PermissionRecordUserRoleMapping : BaseEntity
-    {
-        public Guid PermissionRecordId { get; set; }
+namespace Dev.Core.Security;
 
-        public Guid UserRoleId { get; set; }
-    }
+public class PermissionRecordUserRoleMapping : BaseEntity
+{
+    public Guid PermissionRecordId { get; set; }
+
+    public Guid UserRoleId { get; set; }
 }

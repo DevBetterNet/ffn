@@ -1,16 +1,15 @@
 ﻿using Newtonsoft.Json;
 
-namespace Dev.Core.Configuration
+namespace Dev.Core.Configuration;
+
+/// <summary>
+/// Represents a configuration from app settings
+/// </summary>
+public partial interface IConfig
 {
     /// <summary>
-    /// Represents a configuration from app settings
+    /// Gets a section name to load configuration
     /// </summary>
-    public partial interface IConfig
-    {
-        /// <summary>
-        /// Gets a section name to load configuration
-        /// </summary>
-        [JsonIgnore]
-        string Name => GetType().Name;
-    }
+    [JsonIgnore]
+    string Name => GetType().Name;
 }

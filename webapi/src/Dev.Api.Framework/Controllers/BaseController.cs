@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Dev.WebApiFramework.Controllers
+namespace Dev.WebApiFramework.Controllers;
+
+[Route("[controller]")]
+[ApiController]
+public abstract class BaseController : ControllerBase
 {
-    [Route("[controller]")]
-    [ApiController]
-    public abstract class BaseController : ControllerBase
-    {
-    }
 }

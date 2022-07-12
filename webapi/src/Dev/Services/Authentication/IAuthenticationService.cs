@@ -1,29 +1,28 @@
 ﻿using Dev.Core.Domain.Users;
 using System.Threading.Tasks;
 
-namespace Dev.Services.Authentication
+namespace Dev.Services.Authentication;
+
+/// <summary>
+/// Authentication service interface
+/// </summary>
+public partial interface IAuthenticationService
 {
     /// <summary>
-    /// Authentication service interface
+    /// Sign in
     /// </summary>
-    public partial interface IAuthenticationService
-    {
-        /// <summary>
-        /// Sign in
-        /// </summary>
-        /// <param name="user">User</param>
-        /// <param name="isPersistent">Whether the authentication session is persisted across multiple requests</param>
-        Task SignInAsync(User user, bool isPersistent);
+    /// <param name="user">User</param>
+    /// <param name="isPersistent">Whether the authentication session is persisted across multiple requests</param>
+    Task SignInAsync(User user, bool isPersistent);
 
-        /// <summary>
-        /// Sign out
-        /// </summary>
-        Task SignOutAsync();
+    /// <summary>
+    /// Sign out
+    /// </summary>
+    Task SignOutAsync();
 
-        /// <summary>
-        /// Get authenticated user
-        /// </summary>
-        /// <returns>User</returns>
-        Task<User> GetAuthenticatedUserAsync();
-    }
+    /// <summary>
+    /// Get authenticated user
+    /// </summary>
+    /// <returns>User</returns>
+    Task<User> GetAuthenticatedUserAsync();
 }

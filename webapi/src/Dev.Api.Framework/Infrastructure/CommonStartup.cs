@@ -6,24 +6,23 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Dev.Api.Framework.Infrastructure
+namespace Dev.Api.Framework.Infrastructure;
+
+public class CommonStartup : IDevStartup
 {
-    public class CommonStartup : IDevStartup
+    public int Order => 9999; //should be loaded last
+
+    public void Configure(IApplicationBuilder application, IWebHostEnvironment environment, AppSettings appSettings)
     {
-        public int Order => 9999; //should be loaded last
+        //Endpoints routing
+        application.UseDevEndpoints();
+    }
 
-        public void Configure(IApplicationBuilder application, IWebHostEnvironment environment, AppSettings appSettings)
-        {
-            //Endpoints routing
-            application.UseDevEndpoints();
-        }
+    public void ConfigureServices(IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
+    {
+        //core api template
+        services.AddControllers();
 
-        public void ConfigureServices(IServiceCollection services, IConfiguration configuration, AppSettings appSettings)
-        {
-            //core api template
-            services.AddControllers();
-
-            services.AddMemoryCache();
-        }
+        services.AddMemoryCache();
     }
 }
